@@ -1,14 +1,16 @@
 import express from "express";
 import config from "config";
 import router from "./router";
+import db from "../config/db";
 
 const app = express();
+const PORT = config.get<number>("port");
 
 app.use(express.json());
 
 app.use("/api/", router);
 
-const PORT = config.get<number>("port");
 app.listen(PORT, async () => {
-  console.log(`Rodando na porta ${PORT}`);
+  await db();
+  console.log(`Running on ${PORT}`);
 });
