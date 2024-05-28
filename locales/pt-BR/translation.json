@@ -1,0 +1,15 @@
+{
+  "errors": {
+    "invalid_id_format": "Formato de ID do filme inválido!",
+    "movie_not_found": "Este filme não existe!",
+    "internal_server_error": "Erro interno do servidor"
+  },
+  "validations": {
+    "title_missing": "O título é obrigatório",
+    "rating_not_numeric": "A classificação deve ser um número",
+    "rating_between": "A classificação deve ser entre 0 e 10",
+    "description_missing": "A descrição é obrigatória",
+    "director_missing": "O diretor é obrigatório",
+    "poster_invalid_url": "A imagem deve ser uma URL"
+  }
+}

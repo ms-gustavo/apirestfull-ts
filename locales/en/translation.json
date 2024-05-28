@@ -1,0 +1,15 @@
+{
+  "errors": {
+    "invalid_id_format": "Invalid movie ID format!",
+    "movie_not_found": "This movie doesn't exist!",
+    "internal_server_error": "Internal server error"
+  },
+  "validations": {
+    "title_missing": "Title is missing",
+    "rating_not_numeric": "Rating is not a number",
+    "rating_between": "Rating must be between 0 and 10",
+    "description_missing": "Description is missing",
+    "director_missing": "Director is missing",
+    "poster_invalid_url": "Image must be a URL"
+  }
+}

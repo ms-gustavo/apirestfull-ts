@@ -1,19 +1,38 @@
 import { body } from "express-validator";
+import i18n from "i18next";
 
 export const movieCreateValidation = () => {
   return [
-    body("title").isString().withMessage(`Title is missing`),
+    body("title")
+      .isString()
+      .withMessage((value, { req }) => {
+        return i18n.t("validations.title_missing");
+      }),
     body("rating")
       .isNumeric()
-      .withMessage(`Rating is not a number`)
+      .withMessage((value, { req }) => {
+        return i18n.t("validations.rating_not_numeric");
+      })
       .custom((value: number) => {
         if (value < 0 || value > 10) {
-          throw new Error(`Rating must be between 0 and 10`);
+          return i18n.t("validations.rating_between");
         }
         return true;
       }),
-    body("description").isString().withMessage(`Description is missing`),
-    body("director").isString().withMessage(`Director is missing`),
-    body("poster").isURL().withMessage(`Image must be an URL`),
+    body("description")
+      .isString()
+      .withMessage((value, { req }) => {
+        return i18n.t("validations.description_missing");
+      }),
+    body("director")
+      .isString()
+      .withMessage((value, { req }) => {
+        return i18n.t("validations.director_missing");
+      }),
+    body("poster")
+      .isURL()
+      .withMessage((value, { req }) => {
+        return i18n.t("validations.poster_invalid_url");
+      }),
   ];
 };
