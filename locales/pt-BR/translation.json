@@ -2,7 +2,8 @@
   "errors": {
     "invalid_id_format": "Formato de ID do filme inválido!",
     "movie_not_found": "Este filme não existe!",
-    "internal_server_error": "Erro interno do servidor"
+    "internal_server_error": "Erro interno do servidor",
+    "no_movies_registered": "Não há filmes cadastrados"
   },
   "validations": {
     "title_missing": "O título é obrigatório",
@@ -11,5 +12,10 @@
     "description_missing": "A descrição é obrigatória",
     "director_missing": "O diretor é obrigatório",
     "poster_invalid_url": "A imagem deve ser uma URL"
+  },
+  "success": {
+    "movie_deleted_successfully": "O filme foi deletado",
+    "movie_updated_successfully": "O filme foi atualizado",
+    "movie_created_successfully": "O filme foi criado"
   }
 }

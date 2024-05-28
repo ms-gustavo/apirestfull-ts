@@ -1,5 +1,11 @@
 import { Router, Request, Response } from "express";
-import { createMovie, findMovieById } from "./controllers/movieControllers";
+import {
+  createMovie,
+  deleteMovieById,
+  findMovieById,
+  getAllMovies,
+  updateMovie,
+} from "./controllers/movieControllers";
 import { validate } from "./middlewares/validation";
 import { movieCreateValidation } from "./middlewares/movieValidation";
 
@@ -10,4 +16,7 @@ export default router
     res.status(200).send(`API Working`);
   })
   .post("/movie", movieCreateValidation(), validate, createMovie)
-  .get("/movie/:id", findMovieById);
+  .get("/movie/:id", findMovieById)
+  .get("/movie", getAllMovies)
+  .delete("/movie/:id", deleteMovieById)
+  .patch("/movie/:id", movieCreateValidation(), validate, updateMovie);

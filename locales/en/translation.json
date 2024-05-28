@@ -2,7 +2,8 @@
   "errors": {
     "invalid_id_format": "Invalid movie ID format!",
     "movie_not_found": "This movie doesn't exist!",
-    "internal_server_error": "Internal server error"
+    "internal_server_error": "Internal server error",
+    "no_movies_registered": "There are no movies registered"
   },
   "validations": {
     "title_missing": "Title is missing",
@@ -11,5 +12,10 @@
     "description_missing": "Description is missing",
     "director_missing": "Director is missing",
     "poster_invalid_url": "Image must be a URL"
+  },
+  "success": {
+    "movie_deleted_successfully": "Movie deleted",
+    "movie_updated_successfully": "Movie updated",
+    "movie_created_successfully": "Movie created"
   }
 }
